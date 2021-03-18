@@ -10,8 +10,6 @@ if( isset( $_SESSION['loggedIn'] ) && isset( $_SESSION['username'] ) && $_SESSIO
 
     echo '<section id="list">';
 
-    echo '<h2>Your Shopping List</h2>';
- 
     if( isset( $_SESSION['shopping'] ) && sizeof( $_SESSION['shopping'] ) > 0 ) {
         echo '<ol>';
         for( $i = 0; $i < sizeof( $_SESSION['shopping'] ); $i++ ) {
@@ -20,11 +18,11 @@ if( isset( $_SESSION['loggedIn'] ) && isset( $_SESSION['username'] ) && $_SESSIO
         echo '</ol>';
     }
     else {
-        echo '<p>is empty!</p>';
+        echo '<p>You have no items in your shopping list</p>';
     }
 
     echo '<form method="POST" action="add-item.php">';
-    echo    '<label for="item">New Item</label> ';
+    // echo    '<label for="item">New Item</label> ';
     echo    '<input name="item" type="text"> ';
     echo    '<input type="submit" value="Add">';
     echo '</form>';
@@ -38,10 +36,10 @@ if( isset( $_SESSION['loggedIn'] ) && isset( $_SESSION['username'] ) && $_SESSIO
 }
 else {
     // No, so prompt user to login
-    echo '<h2>Please Login...</h2>';
+    echo '<h2>Login...</h2>';
 
     echo '<form method="POST" action="login.php">';
-    echo    '<label for="username">Username</label> ';
+    // echo    '<label for="username">Username</label> ';
     echo    '<input name="username" type="text"> ';
     echo    '<input type="submit" value="Login">';
     echo '</form>';

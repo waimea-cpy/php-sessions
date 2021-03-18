@@ -14,8 +14,8 @@
 <body>
 
     <header>
-        <h1>Shopping List</h1>
-        <p class="tagline">PHP Session Demo</p>
+        <h1>PHP Session Demo</h1>
+        <p class="tagline">Shopping List</p>
     </header>
 
     <!-- Show debug info -->

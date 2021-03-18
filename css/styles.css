@@ -9,18 +9,24 @@ html, body {
 
 html {
     font-family: sans-serif;
-    background: #222;
+    background: #369;
 }
 
 body {
     background: #fff;
+    box-shadow: 0 0.5rem 1rem #0000007f;
     padding: 1.5rem;
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
 }
 
+header h1, header p {
+    margin: 0.3rem;
+}
+
 main {
+    margin-top: 2rem;
     flex: 1;
 }
 
@@ -36,15 +42,27 @@ h1, h2, h3 {
 
 form {
     width: 100%;
-    margin: 1rem auto;
-    text-align: center;
+    margin: 2rem auto 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+}
+
+input[type="text"] {
+    flex: 1;
 }
 
 #list {
     border: 1px solid #369;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     background: rgb(240, 248, 255);
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     margin: 2rem 0;
     text-align: center;
 }
@@ -60,7 +78,7 @@ form {
 }
 
 #list li {
-    padding: 0.3em 0.8em;
+    padding: 0.5em 0.8em;
     border: 1px solid #666;
     background: #fff;
     border-radius: 0.3rem;
@@ -79,7 +97,7 @@ form {
 @media screen and (min-width: 25rem) {
     body {
         max-width: 25rem;
-        margin: 1rem auto;
-        border-radius: 1rem;
+        margin: 1.5rem auto;
+        border-radius: 0.5rem;
     }
 }
